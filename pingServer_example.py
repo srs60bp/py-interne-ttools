@@ -1,12 +1,12 @@
 import os
 hostname = "dir.bg" #example
-response = os.system("ping -c 1 " + hostname)
+response = os.system("ping -n 1 " + hostname)
 
 #and then check the response...
 if response == 0:
-  print hostname, 'is up!'
+  print(hostname, 'is up!')
 else:
-  print hostname, 'is down!'
+  print(hostname, 'is down!')
 # -----------------------------------------------
 import pyping
 
@@ -22,7 +22,7 @@ import subprocess
 host = "dir.bg"
 
 ping = subprocess.Popen(
-    ["ping", "-c", "4", host],
+    ["ping", "-n", "1", host],
     stdout = subprocess.PIPE,
     stderr = subprocess.PIPE
 )
